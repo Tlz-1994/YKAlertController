@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25C0A9FA595EF03D40A0C469 /* libPods-YKAlertController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1789A26599D9FAF568B2310D /* libPods-YKAlertController.a */; };
+		2A00B2D89650F48D840E979C /* libPods-YKAlertControllerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDE89483818D7FDCA623BE1 /* libPods-YKAlertControllerUITests.a */; };
+		DAB050FD1F035C5900D8E678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB050FC1F035C5900D8E678 /* main.m */; };
+		DAB051001F035C5900D8E678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB050FF1F035C5900D8E678 /* AppDelegate.m */; };
+		DAB051031F035C5900D8E678 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB051021F035C5900D8E678 /* ViewController.m */; };
+		DAB051061F035C5900D8E678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB051041F035C5900D8E678 /* Main.storyboard */; };
+		DAB051081F035C5900D8E678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB051071F035C5900D8E678 /* Assets.xcassets */; };
+		DAB0510B1F035C5900D8E678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB051091F035C5900D8E678 /* LaunchScreen.storyboard */; };
+		DAB051161F035C5900D8E678 /* YKAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB051151F035C5900D8E678 /* YKAlertControllerTests.m */; };
+		DAB051211F035C5900D8E678 /* YKAlertControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB051201F035C5900D8E678 /* YKAlertControllerUITests.m */; };
+		DAB051311F035C9800D8E678 /* YKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB051301F035C9800D8E678 /* YKAlertController.m */; };
+		E315C08A8B077AC62F453498 /* libPods-YKAlertControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C03E72DFABB13DC71C7AF9C /* libPods-YKAlertControllerTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAB051121F035C5900D8E678 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAB050F01F035C5900D8E678 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB050F71F035C5900D8E678;
+			remoteInfo = YKAlertController;
+		};
+		DAB0511D1F035C5900D8E678 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAB050F01F035C5900D8E678 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB050F71F035C5900D8E678;
+			remoteInfo = YKAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1789A26599D9FAF568B2310D /* libPods-YKAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKAlertController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		209EE8A5ED5691FBC6C49404 /* Pods-YKAlertControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertControllerTests/Pods-YKAlertControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A72B2BFB0984E385C315588 /* Pods-YKAlertControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertControllerTests/Pods-YKAlertControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C03E72DFABB13DC71C7AF9C /* libPods-YKAlertControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKAlertControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FDE89483818D7FDCA623BE1 /* libPods-YKAlertControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKAlertControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A954EF67657A519FC87CDC /* Pods-YKAlertControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertControllerUITests/Pods-YKAlertControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5534121212B64FA0E8055E4 /* Pods-YKAlertControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertControllerUITests/Pods-YKAlertControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CABDDFF96B0105E3CCF96AFB /* Pods-YKAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertController/Pods-YKAlertController.debug.xcconfig"; sourceTree = "<group>"; };
+		DAB050F81F035C5900D8E678 /* YKAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB050FC1F035C5900D8E678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAB050FE1F035C5900D8E678 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAB050FF1F035C5900D8E678 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAB051011F035C5900D8E678 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAB051021F035C5900D8E678 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAB051051F035C5900D8E678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAB051071F035C5900D8E678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAB0510A1F035C5900D8E678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAB0510C1F035C5900D8E678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB051111F035C5900D8E678 /* YKAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB051151F035C5900D8E678 /* YKAlertControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAlertControllerTests.m; sourceTree = "<group>"; };
+		DAB051171F035C5900D8E678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB0511C1F035C5900D8E678 /* YKAlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKAlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB051201F035C5900D8E678 /* YKAlertControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAlertControllerUITests.m; sourceTree = "<group>"; };
+		DAB051221F035C5900D8E678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB0512F1F035C9700D8E678 /* YKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAlertController.h; sourceTree = "<group>"; };
+		DAB051301F035C9800D8E678 /* YKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAlertController.m; sourceTree = "<group>"; };
+		DDE8A1FDE9238942697EC574 /* Pods-YKAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKAlertController.release.xcconfig"; path = "Pods/Target Support Files/Pods-YKAlertController/Pods-YKAlertController.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAB050F51F035C5900D8E678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C0A9FA595EF03D40A0C469 /* libPods-YKAlertController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB0510E1F035C5900D8E678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E315C08A8B077AC62F453498 /* libPods-YKAlertControllerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB051191F035C5900D8E678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A00B2D89650F48D840E979C /* libPods-YKAlertControllerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		466A38C2A0133A76E46F7A78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CABDDFF96B0105E3CCF96AFB /* Pods-YKAlertController.debug.xcconfig */,
+				DDE8A1FDE9238942697EC574 /* Pods-YKAlertController.release.xcconfig */,
+				209EE8A5ED5691FBC6C49404 /* Pods-YKAlertControllerTests.debug.xcconfig */,
+				5A72B2BFB0984E385C315588 /* Pods-YKAlertControllerTests.release.xcconfig */,
+				79A954EF67657A519FC87CDC /* Pods-YKAlertControllerUITests.debug.xcconfig */,
+				B5534121212B64FA0E8055E4 /* Pods-YKAlertControllerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6FC49A33BDEAD00D3EEAA9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1789A26599D9FAF568B2310D /* libPods-YKAlertController.a */,
+				5C03E72DFABB13DC71C7AF9C /* libPods-YKAlertControllerTests.a */,
+				6FDE89483818D7FDCA623BE1 /* libPods-YKAlertControllerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAB050EF1F035C5900D8E678 = {
+			isa = PBXGroup;
+			children = (
+				DAB050FA1F035C5900D8E678 /* YKAlertController */,
+				DAB051141F035C5900D8E678 /* YKAlertControllerTests */,
+				DAB0511F1F035C5900D8E678 /* YKAlertControllerUITests */,
+				DAB050F91F035C5900D8E678 /* Products */,
+				466A38C2A0133A76E46F7A78 /* Pods */,
+				D6FC49A33BDEAD00D3EEAA9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAB050F91F035C5900D8E678 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB050F81F035C5900D8E678 /* YKAlertController.app */,
+				DAB051111F035C5900D8E678 /* YKAlertControllerTests.xctest */,
+				DAB0511C1F035C5900D8E678 /* YKAlertControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAB050FA1F035C5900D8E678 /* YKAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				DAB0512E1F035C9700D8E678 /* source */,
+				DAB050FE1F035C5900D8E678 /* AppDelegate.h */,
+				DAB050FF1F035C5900D8E678 /* AppDelegate.m */,
+				DAB051011F035C5900D8E678 /* ViewController.h */,
+				DAB051021F035C5900D8E678 /* ViewController.m */,
+				DAB051041F035C5900D8E678 /* Main.storyboard */,
+				DAB051071F035C5900D8E678 /* Assets.xcassets */,
+				DAB051091F035C5900D8E678 /* LaunchScreen.storyboard */,
+				DAB0510C1F035C5900D8E678 /* Info.plist */,
+				DAB050FB1F035C5900D8E678 /* Supporting Files */,
+			);
+			path = YKAlertController;
+			sourceTree = "<group>";
+		};
+		DAB050FB1F035C5900D8E678 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAB050FC1F035C5900D8E678 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAB051141F035C5900D8E678 /* YKAlertControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAB051151F035C5900D8E678 /* YKAlertControllerTests.m */,
+				DAB051171F035C5900D8E678 /* Info.plist */,
+			);
+			path = YKAlertControllerTests;
+			sourceTree = "<group>";
+		};
+		DAB0511F1F035C5900D8E678 /* YKAlertControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAB051201F035C5900D8E678 /* YKAlertControllerUITests.m */,
+				DAB051221F035C5900D8E678 /* Info.plist */,
+			);
+			path = YKAlertControllerUITests;
+			sourceTree = "<group>";
+		};
+		DAB0512E1F035C9700D8E678 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DAB0512F1F035C9700D8E678 /* YKAlertController.h */,
+				DAB051301F035C9800D8E678 /* YKAlertController.m */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAB050F71F035C5900D8E678 /* YKAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB051251F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertController" */;
+			buildPhases = (
+				8C3A03C29CFB45AE0C0B11B2 /* [CP] Check Pods Manifest.lock */,
+				DAB050F41F035C5900D8E678 /* Sources */,
+				DAB050F51F035C5900D8E678 /* Frameworks */,
+				DAB050F61F035C5900D8E678 /* Resources */,
+				B7AF799AD4F383B9B36901E8 /* [CP] Embed Pods Frameworks */,
+				3FB0F8455A759736957DE2C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKAlertController;
+			productName = YKAlertController;
+			productReference = DAB050F81F035C5900D8E678 /* YKAlertController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAB051101F035C5900D8E678 /* YKAlertControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB051281F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerTests" */;
+			buildPhases = (
+				7C853BFA4EEFB460799E8441 /* [CP] Check Pods Manifest.lock */,
+				DAB0510D1F035C5900D8E678 /* Sources */,
+				DAB0510E1F035C5900D8E678 /* Frameworks */,
+				DAB0510F1F035C5900D8E678 /* Resources */,
+				99019F2CFBBAADCB08E7212F /* [CP] Embed Pods Frameworks */,
+				30FD4228BFC15146288BC55C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB051131F035C5900D8E678 /* PBXTargetDependency */,
+			);
+			name = YKAlertControllerTests;
+			productName = YKAlertControllerTests;
+			productReference = DAB051111F035C5900D8E678 /* YKAlertControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAB0511B1F035C5900D8E678 /* YKAlertControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB0512B1F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerUITests" */;
+			buildPhases = (
+				B7F85A746C5D28E9CCA53FFA /* [CP] Check Pods Manifest.lock */,
+				DAB051181F035C5900D8E678 /* Sources */,
+				DAB051191F035C5900D8E678 /* Frameworks */,
+				DAB0511A1F035C5900D8E678 /* Resources */,
+				35FD311613C6246BF6BA6690 /* [CP] Embed Pods Frameworks */,
+				35C6D98A8B2B7F652070F736 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB0511E1F035C5900D8E678 /* PBXTargetDependency */,
+			);
+			name = YKAlertControllerUITests;
+			productName = YKAlertControllerUITests;
+			productReference = DAB0511C1F035C5900D8E678 /* YKAlertControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAB050F01F035C5900D8E678 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Stefanie;
+				TargetAttributes = {
+					DAB050F71F035C5900D8E678 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = DZNJ4F4E32;
+						ProvisioningStyle = Automatic;
+					};
+					DAB051101F035C5900D8E678 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = DZNJ4F4E32;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DAB050F71F035C5900D8E678;
+					};
+					DAB0511B1F035C5900D8E678 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = DZNJ4F4E32;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DAB050F71F035C5900D8E678;
+					};
+				};
+			};
+			buildConfigurationList = DAB050F31F035C5900D8E678 /* Build configuration list for PBXProject "YKAlertController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAB050EF1F035C5900D8E678;
+			productRefGroup = DAB050F91F035C5900D8E678 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAB050F71F035C5900D8E678 /* YKAlertController */,
+				DAB051101F035C5900D8E678 /* YKAlertControllerTests */,
+				DAB0511B1F035C5900D8E678 /* YKAlertControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAB050F61F035C5900D8E678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB0510B1F035C5900D8E678 /* LaunchScreen.storyboard in Resources */,
+				DAB051081F035C5900D8E678 /* Assets.xcassets in Resources */,
+				DAB051061F035C5900D8E678 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB0510F1F035C5900D8E678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB0511A1F035C5900D8E678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30FD4228BFC15146288BC55C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertControllerTests/Pods-YKAlertControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35C6D98A8B2B7F652070F736 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertControllerUITests/Pods-YKAlertControllerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35FD311613C6246BF6BA6690 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertControllerUITests/Pods-YKAlertControllerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FB0F8455A759736957DE2C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertController/Pods-YKAlertController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C853BFA4EEFB460799E8441 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C3A03C29CFB45AE0C0B11B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99019F2CFBBAADCB08E7212F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertControllerTests/Pods-YKAlertControllerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7AF799AD4F383B9B36901E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKAlertController/Pods-YKAlertController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7F85A746C5D28E9CCA53FFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAB050F41F035C5900D8E678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB051031F035C5900D8E678 /* ViewController.m in Sources */,
+				DAB051001F035C5900D8E678 /* AppDelegate.m in Sources */,
+				DAB051311F035C9800D8E678 /* YKAlertController.m in Sources */,
+				DAB050FD1F035C5900D8E678 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB0510D1F035C5900D8E678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB051161F035C5900D8E678 /* YKAlertControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB051181F035C5900D8E678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB051211F035C5900D8E678 /* YKAlertControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAB051131F035C5900D8E678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAB050F71F035C5900D8E678 /* YKAlertController */;
+			targetProxy = DAB051121F035C5900D8E678 /* PBXContainerItemProxy */;
+		};
+		DAB0511E1F035C5900D8E678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAB050F71F035C5900D8E678 /* YKAlertController */;
+			targetProxy = DAB0511D1F035C5900D8E678 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAB051041F035C5900D8E678 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB051051F035C5900D8E678 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAB051091F035C5900D8E678 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB0510A1F035C5900D8E678 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAB051231F035C5900D8E678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAB051241F035C5900D8E678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAB051261F035C5900D8E678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABDDFF96B0105E3CCF96AFB /* Pods-YKAlertController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAB051271F035C5900D8E678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE8A1FDE9238942697EC574 /* Pods-YKAlertController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAB051291F035C5900D8E678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 209EE8A5ED5691FBC6C49404 /* Pods-YKAlertControllerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKAlertController.app/YKAlertController";
+			};
+			name = Debug;
+		};
+		DAB0512A1F035C5900D8E678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A72B2BFB0984E385C315588 /* Pods-YKAlertControllerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKAlertController.app/YKAlertController";
+			};
+			name = Release;
+		};
+		DAB0512C1F035C5900D8E678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A954EF67657A519FC87CDC /* Pods-YKAlertControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YKAlertController;
+			};
+			name = Debug;
+		};
+		DAB0512D1F035C5900D8E678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5534121212B64FA0E8055E4 /* Pods-YKAlertControllerUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DZNJ4F4E32;
+				INFOPLIST_FILE = YKAlertControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefanie.YKAlertControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YKAlertController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAB050F31F035C5900D8E678 /* Build configuration list for PBXProject "YKAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB051231F035C5900D8E678 /* Debug */,
+				DAB051241F035C5900D8E678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB051251F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB051261F035C5900D8E678 /* Debug */,
+				DAB051271F035C5900D8E678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAB051281F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB051291F035C5900D8E678 /* Debug */,
+				DAB0512A1F035C5900D8E678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAB0512B1F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB0512C1F035C5900D8E678 /* Debug */,
+				DAB0512D1F035C5900D8E678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAB050F01F035C5900D8E678 /* Project object */;
+}
