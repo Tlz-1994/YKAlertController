@@ -28,15 +28,14 @@
 
 - (IBAction)showAlertAction:(UIButton *)sender {
     YKAlertController *alertController = [YKAlertController alertControllerWithTitle:@"弹出来吧" message:@"具体的弹出样式和动画可以参考'YKAlertController.m'文件的写法"];
-    alertController.cancleString = @"取消";
-    alertController.sureString = @"确定";
+    [alertController addActionWithTitle:@"取消" clickHandle:nil];
+//    [alertController addActionWithTitle:@"确认" clickHandle:^{
+//        
+//    }];
+//    [alertController addActionWithTitle:@"确认" clickHandle:^{
+//        
+//    }];
     [alertController showWithAnimated:YES];
-    alertController.cancleHandle = ^{
-        
-    };
-    alertController.clickActionHandle = ^{
-        
-    };
 }
 
 @end

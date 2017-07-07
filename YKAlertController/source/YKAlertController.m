@@ -25,6 +25,12 @@
 @property (nonatomic, strong) UIView *darkView;
 @property (nonatomic, strong) UIView *contentView;
 
+@property (nonatomic, copy) NSString *contentTitle;
+@property (nonatomic, copy) NSString *message;
+
+@property (nonatomic, strong) NSMutableArray<NSString *> *actions;
+@property (nonatomic, strong) NSMutableArray<YKAlertControllerHandle> *handles;
+
 @end
 
 @implementation YKAlertController
@@ -34,6 +40,20 @@
     alert.contentTitle = title;
     alert.message = message;
     return alert;
+}
+
+- (void)addActionWithTitle:(NSString *)title clickHandle:(YKAlertControllerHandle)handle {
+    if (!title) {
+        [self.actions addObject:@"标题非空"];
+    } else {
+        [self.actions addObject:title];
+    }
+    if (!handle) {
+        YKAlertControllerHandle nilHanle = ^(){};
+        [self.handles addObject:nilHanle];
+    } else {
+        [self.handles addObject:handle];
+    }
 }
 
 
@@ -62,7 +82,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] init];
     [_contentView addSubview:titleLabel];
-    titleLabel.textColor = BJ333Color;
+    titleLabel.textColor = BJHexColor(0x333333);
     titleLabel.font = [UIFont boldSystemFontOfSize:17];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(30);
@@ -75,7 +95,7 @@
     UILabel *contentLabel = [[UILabel alloc] init];
     [_contentView addSubview:contentLabel];
     contentLabel.numberOfLines = 0;
-    contentLabel.textColor = BJ666Color;
+    contentLabel.textColor = BJHexColor(0x666666);
     contentLabel.font = [UIFont systemFontOfSize:15];
     [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(titleLabel.mas_bottom).offset(25);
@@ -101,52 +121,103 @@
         make.right.offset(-15);
     }];
     
-    UIButton *cancleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancleButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    [_contentView addSubview:cancleButton];
-    [cancleButton setTitle:self.cancleString forState:UIControlStateNormal];
-    [cancleButton setTitleColor:BJMainColor forState:UIControlStateNormal];
-    [cancleButton setTitleColor:BJMainColor forState:UIControlStateHighlighted];
-    [cancleButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
-    [cancleButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(sepView.mas_bottom).offset(0);
-        make.left.offset(0);
-        make.size.mas_equalTo(CGSizeMake(130, 47));
-    }];
-    [cancleButton addTarget:self action:@selector(hideWithAnimated:) forControlEvents:UIControlEventTouchUpInside];
+    // 如果只有一个按钮
+    if (self.actions.count == 1) {
+        UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        actionButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_contentView addSubview:actionButton];
+        [actionButton setTitle:self.actions[0] forState:UIControlStateNormal];
+        [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateNormal];
+        [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateHighlighted];
+        [actionButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
+        [actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(sepView.mas_bottom).offset(0);
+            make.left.right.offset(0);
+            make.height.offset(47);
+        }];
+        [actionButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_contentView layoutIfNeeded];
+        [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.offset(260);
+            make.height.offset(actionButton.frame.origin.y+actionButton.frame.size.height);
+            make.center.mas_equalTo(weakSelf.view);
+        }];
+        actionButton.tag = 0;   // 用tag标记点击的按钮位置
+    }
     
-    UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    actionButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    [_contentView addSubview:actionButton];
-    [actionButton setTitle:self.sureString forState:UIControlStateNormal];
-    [actionButton setTitleColor:BJMainColor forState:UIControlStateNormal];
-    [actionButton setTitleColor:BJMainColor forState:UIControlStateHighlighted];
-    [actionButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
-    [actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(sepView.mas_bottom).offset(0);
-        make.left.offset(130);
-        make.size.mas_equalTo(CGSizeMake(130, 47));
-    }];
-    [actionButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIView *verticalView = [[UIView alloc] init];
-    verticalView.backgroundColor = BJHexColor(0xeeeeee);;
-    [_contentView addSubview:verticalView];
-    [verticalView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(actionButton);
-        make.centerX.mas_equalTo(weakSelf.contentView);
-        make.size.mas_equalTo(CGSizeMake(0.5, 20));
-    }];
-    [_contentView layoutIfNeeded];
-    [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.offset(260);
-        make.height.offset(actionButton.frame.origin.y+actionButton.frame.size.height);
-        make.center.mas_equalTo(self.view);
-    }];
-    [_contentView layoutIfNeeded];
+    else if (self.actions.count == 2) {
+        UIButton *cancleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancleButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_contentView addSubview:cancleButton];
+        [cancleButton setTitle:self.actions[0] forState:UIControlStateNormal];
+        [cancleButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateNormal];
+        [cancleButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateHighlighted];
+        [cancleButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
+        [cancleButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(sepView.mas_bottom).offset(0);
+            make.left.offset(0);
+            make.size.mas_equalTo(CGSizeMake(130, 47));
+        }];
+        cancleButton.tag = 0;
+        [cancleButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        actionButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_contentView addSubview:actionButton];
+        [actionButton setTitle:self.actions[1] forState:UIControlStateNormal];
+        [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateNormal];
+        [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateHighlighted];
+        [actionButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
+        [actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(sepView.mas_bottom).offset(0);
+            make.left.offset(130);
+            make.size.mas_equalTo(CGSizeMake(130, 47));
+        }];
+        [actionButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+        actionButton.tag = 1;
+        
+        UIView *verticalView = [[UIView alloc] init];
+        verticalView.backgroundColor = BJHexColor(0xeeeeee);;
+        [_contentView addSubview:verticalView];
+        [verticalView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(actionButton);
+            make.centerX.mas_equalTo(weakSelf.contentView);
+            make.size.mas_equalTo(CGSizeMake(0.5, 20));
+        }];
+        
+        [_contentView layoutIfNeeded];
+        [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.offset(260);
+            make.height.offset(actionButton.frame.origin.y+actionButton.frame.size.height);
+            make.center.mas_equalTo(weakSelf.view);
+        }];
+    } else {
+        // 按钮数量大于2
+        for (int i = 0; i < self.actions.count; i++) {
+            UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            actionButton.titleLabel.font = [UIFont systemFontOfSize:17];
+            [_contentView addSubview:actionButton];
+            [actionButton setTitle:self.actions[i] forState:UIControlStateNormal];
+            [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateNormal];
+            [actionButton setTitleColor:BJHexColor(0x3eccb3) forState:UIControlStateHighlighted];
+            [actionButton setBackgroundImage:[self imageWithColor:BJHexColor(0xf5f5f5)] forState:UIControlStateHighlighted];
+            [actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(sepView.mas_bottom).offset(47*i);
+                make.left.right.offset(0);
+                make.height.offset(47);
+            }];
+            [_contentView layoutIfNeeded];
+            [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.width.offset(260);
+                make.height.offset(actionButton.frame.origin.y+actionButton.frame.size.height);
+                make.center.mas_equalTo(weakSelf.view);
+            }];
+            [actionButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+            actionButton.tag = i;
+        }
+    }
 }
 
-// 因为
 - (void)viewWillAppear:(BOOL)animated {
     [self.alertWindow layoutIfNeeded];
     self.contentView.transform = CGAffineTransformMakeScale(1.3, 1.3);
@@ -180,7 +251,6 @@
     } completion:^(BOOL finished) {
         self.alertWindow.rootViewController = nil;
         self.alertWindow = nil;
-        if (self.cancleHandle) self.cancleHandle();
     }];
 }
 
@@ -191,7 +261,8 @@
     } completion:^(BOOL finished) {
         self.alertWindow.rootViewController = nil;
         self.alertWindow = nil;
-        if (self.clickActionHandle) self.clickActionHandle();
+        YKAlertControllerHandle handle = self.handles[sender.tag];
+        if (handle) handle();
     }];
 }
 
@@ -206,7 +277,19 @@
     return theImage;
 }
 
-- (void)dealloc {
+- (NSMutableArray *)actions {
+    if (!_actions) {
+        _actions = [[NSMutableArray alloc] init];
+    }
+    return _actions;
 }
+
+- (NSMutableArray *)handles {
+    if (!_handles) {
+        _handles = [[NSMutableArray alloc] init];
+    }
+    return _handles;
+}
+
 
 @end
