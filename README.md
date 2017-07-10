@@ -9,6 +9,7 @@
     [alertController addActionWithTitle:@"按钮2" clickHandle:^{
         
     }];
+    [alertController showWithAnimated:YES];
 
  ```
 <div style={display: flex}>
