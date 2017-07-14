@@ -630,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CABDDFF96B0105E3CCF96AFB /* Pods-YKAlertController.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZNJ4F4E32;
 				INFOPLIST_FILE = YKAlertController/Info.plist;
@@ -643,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDE8A1FDE9238942697EC574 /* Pods-YKAlertController.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZNJ4F4E32;
 				INFOPLIST_FILE = YKAlertController/Info.plist;
@@ -725,6 +727,7 @@
 				DAB051271F035C5900D8E678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAB051281F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +736,7 @@
 				DAB0512A1F035C5900D8E678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAB0512B1F035C5900D8E678 /* Build configuration list for PBXNativeTarget "YKAlertControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +745,7 @@
 				DAB0512D1F035C5900D8E678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
