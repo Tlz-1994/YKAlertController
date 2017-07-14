@@ -27,15 +27,18 @@
 }
 
 - (IBAction)showAlertAction:(UIButton *)sender {
-    YKAlertController *alertController = [YKAlertController alertControllerWithTitle:@"弹出来吧" message:@"具体的弹出样式和动画可以参考'YKAlertController.m'文件的写法"];
-    [alertController addActionWithTitle:@"取消" clickHandle:nil];
-//    [alertController addActionWithTitle:@"确认" clickHandle:^{
-//        
-//    }];
-//    [alertController addActionWithTitle:@"确认" clickHandle:^{
-//        
-//    }];
-    [alertController showWithAnimated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        YKAlertController *alertController = [YKAlertController alertControllerWithTitle:@"弹出来吧" message:@"具体的弹出样式和动画可以参考'YKAlertController.m'文件的写法"];
+        [alertController addActionWithTitle:@"取消" clickHandle:nil];
+        [alertController addActionWithTitle:@"确认" clickHandle:^{
+            
+        }];
+        [alertController addActionWithTitle:@"取消" clickHandle:nil];
+        [alertController addActionWithTitle:@"确认" clickHandle:^{
+            
+        }];
+        [alertController showWithAnimated:YES];
+    });
 }
 
 @end

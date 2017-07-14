@@ -206,6 +206,18 @@
                 make.left.right.offset(0);
                 make.height.offset(47);
             }];
+            if (i != self.actions.count - 1) {
+                UIView *sepView = [[UIView alloc] init];
+                [_contentView addSubview:sepView];
+                sepView.backgroundColor = BJHexColor(0xeeeeee);
+                [sepView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(actionButton.mas_bottom).offset(0);
+                    make.height.offset(0.5);
+                    make.left.offset(15);
+                    make.right.offset(-15);
+                }];
+            }
+            
             [_contentView layoutIfNeeded];
             [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.width.offset(260);
@@ -237,33 +249,39 @@
 }
 
 - (void)showWithAnimated:(BOOL)animated {
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    window.windowLevel = UIWindowLevelAlert;
-    [window makeKeyAndVisible];
-    self.alertWindow = window;
-    window.rootViewController = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        window.windowLevel = UIWindowLevelAlert;
+        [window makeKeyAndVisible];
+        self.alertWindow = window;
+        window.rootViewController = self;
+    });
 }
 
 - (void)hideWithAnimated:(BOOL)animated {
-    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        self.darkView.alpha = 0;
-        self.contentView.transform = CGAffineTransformMakeScale(0.0, 0.0);
-    } completion:^(BOOL finished) {
-        self.alertWindow.rootViewController = nil;
-        self.alertWindow = nil;
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.darkView.alpha = 0;
+            self.contentView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        } completion:^(BOOL finished) {
+            self.alertWindow.rootViewController = nil;
+            self.alertWindow = nil;
+        }];
+    });
 }
 
 - (void)clickAction:(UIButton *)sender {
-    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        self.darkView.alpha = 0;
-        self.contentView.transform = CGAffineTransformMakeScale(0.0, 0.0);
-    } completion:^(BOOL finished) {
-        self.alertWindow.rootViewController = nil;
-        self.alertWindow = nil;
-        YKAlertControllerHandle handle = self.handles[sender.tag];
-        if (handle) handle();
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.darkView.alpha = 0;
+            self.contentView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        } completion:^(BOOL finished) {
+            self.alertWindow.rootViewController = nil;
+            self.alertWindow = nil;
+            YKAlertControllerHandle handle = self.handles[sender.tag];
+            if (handle) handle();
+        }];
+    });
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color {
